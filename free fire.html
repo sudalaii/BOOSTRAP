@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Document</title>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: capitalize;
+    }
+
+    #latestnews {
+      background-color: #FDFBFC;
+    }
+
+
+    #latestnews img:hover {
+      transform: scale(1.1);
+      transition: transform 1s;
+    }
+
+    #hayato img:hover {
+      transform: scale(0.9);
+      transition: transform 2s;
+      cursor: url("mouse.jpg"), auto;
+    }
+
+    #last {
+      background-image: url(home_esports_bg_m.658d754.jpeg);
+
+    }
+
+    #footer {
+      background-color: #181818;
+      color: #FDFBFC;
+      text-decoration: underline;
+
+
+    }
+
+    #sidepart {
+      background-color: orange;
+      color: #FDFBFC;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid sticky-top ">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark p-3 g-5 ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="free fire.html"><img src="images logo.png" height="30px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="free fire charecter.html">characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">news</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">media</a>
+            </li>
+            <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">universe</a>
+            </li>
+          </ul>
+          <div>
+            <button class="btn btn-primary badge bg-warning text-dark fs-5" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">sign in</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">sign in</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <form name="myform">
+                <div class="offcanvas-body" id="sidepart">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label>name</label>
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                        name="firstname" id="fname">
+                      <p id="warning"></p>
+                    </div>
+                    <div class="col-12">
+                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                        name="lastname">
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" name="mail">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" name="password">
+                    </div>
+                    <!-- <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div> -->
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="inputCity" name="city">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">State</label>
+                      <select id="inputState" class="form-select" name="state">
+                        <option>tamilnadu</option>
+                        <option>kerala</option>
+                        <option>bangal0re</option>
+                      </select>
+                    </div>
+                    <!-- <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div> -->
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck" name="checkbox">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="button " class="btn btn-primary" onclick="valid()">Sign in</button>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+  </div><br>
+  
+    <div class="container-fluid card bg-dark text-white">
+      <img src="free fire.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay d-grid align-items-center" data-aos="zoom-in-up">
+        <img src="free fire tittle.png" height="50px" alt="">
+      </div>
+    </div>
+    <div class="container py-5 " id="latestnews">
+      <h1 class="m-5">Latest News</h1>
+      <div class="container-fluid " data-aos="zoom-in-up">
+        <div class="row row-cols-1 row-cols-md-3 g-4 ">
+          <div class="col">
+            <div class="card">
+              <img src="122c0d6dc52261147ad793d6885ef87f.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">21/04/2024 patch note</h5>
+                <p class="card-text ">patch note</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="37181969c2c51784438c7733c6ed1ae0.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">30/10/2023 patch note</h5>
+                <p class="card-text">patch note</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="b6336129c8b9e8c32d5d1356da7b499f.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">20/10/2023 devblog</h5>
+                <p class="card-text">Br Economy Adjustment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid" id="hayato">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-0 mt-3">
+            <img src="65fef1213324415a00e170bef3a51e2b.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-0 mt-3">
+            <img src="free-fire.webp" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5 ">
+      <div class="card bg-light text-white">
+        <img src="Andrew-Free-Fire.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay d-grid align-items-center">
+          <div class="container-fluid">
+            <h1>choose your character</h1>
+            <p> are you ready to pooyah with your favorite charecter</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <div class="row">
+          <div class="card col-12 bg-light text-white">
+            <img src="Free-Fire-Winterlands-SubZero-1.avif" class="img-fluid" alt="..." width="100%">
+            <div class="card-img-overlay d-grid align-items-center justify-content-end">
+              <div class="container-fluid">
+                <!-- <h1 class="fs-1 text-dark  px-5">special event</h1> -->
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Garena-Free-Fire_1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="garena_free_fire_max_1689483071000_1704947338760.avif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="471353a5e6056457abb5f2c7ea2cef1bjpg_1655167581277_1703567000689.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  <br>
+  <div class="container-fluid text-center " id="footer">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
+      <div class="col"><img src="garena_logo.b28b2b6.png" alt="" width="50%"></div>
+      <div class="col">
+        <h3>privacy policy</h3>
+      </div>
+      <div class="col">
+        <h3>for parents faq</h3>
+      </div>
+      <div class="col">
+        <h3>tearms of service</h3>
+      </div>
+    </div>
+    <h3>copy rights @ garena international .trade markers belong to the respective owners.</h3>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function valid() {
+       let firstName = document.forms['myform']['firstname'].value;
+       let lastName = document.forms['myform']['lastname'].value;
+       let  email = document.forms['myform']['mail'].value;
+       let password=document.forms['myform']['password'].value;
+       let city = document.forms['myform']['city'].value;
+      //  let state= document.forms['myform']['state'].value;
+        // let checkbox=document.form['myform']['checkbox'].value;
+      // alert(password);
+      
+      if (!firstName) {
+        alert("enter the firstname");
+      } 
+      else if(!lastName){
+        alert("enter the lastname");
+      }
+       else if(!email){
+       alert("enter the mail");
+       }
+       else if(!password){
+        alert("enter the password");
+       }
+      else if(!city){
+       alert("enter the city");
+       }
+      // else if(!state){
+      //   alert("select your state");
+      //  }
+      // else if(!checkbox){
+      //    alert("click the checkbox");
+      //  }
+      
+      
+    
+    }
+  
+
+  </script>
+</body>
+
+</html>
